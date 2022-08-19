@@ -1,0 +1,46 @@
+html {
+    height: 100%;
+  }
+
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(181, 121, 76);
+    margin: 0;
+    gap: 20px;
+    background-image: linear-gradient(to right top, #36786a, #3f9170, #57a86f, #7abf68, #a6d45c);
+}
+
+#title {;
+    width: 100%;
+    /* background-color: #4D9565; */
+    text-align: center;
+    color: #DFE0DF;
+    font-size: 80px;
+    margin: 0;
+}
+
+#gridContainer {
+    height: 450;
+    width: 450;
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+    background-color: rgba(252, 250, 250);
+    border: 1px solid rgb(51, 33, 20);
+    padding: 0px;
+    gap: 0;
+    margin: 0px;
+}
+
+.gridElement {
+    height: 26px;
+    width: 26px;
+    background-color: rgba(100, 197, 137, 0.5);
+    border: 1px solid rgb(97, 64, 39);
+    padding: 0px;
+}
