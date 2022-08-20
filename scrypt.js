@@ -7,13 +7,18 @@ for (let i = 0; i < 256; i++) {
 
 const gridElement = document.getElementsByClassName("gridElement")
 
-document.getElementById("gridContainer").addEventListener("mouseover", function changeColor(event){
-    event.target.style.backgroundColor = 'salmon';
+document.querySelectorAll('.gridElement').forEach(item => {
+    item.addEventListener('mouseover', event => {
+        event.target.style.backgroundColor = 'salmon';
+    });
+  });
+
+let gridSize = document.querySelector("input");
+let gridValue = document.querySelector("label");
+
+gridValue.textContent = gridSize.value + " " + "x " + gridSize.value;
+
+gridSize.addEventListener("input", function () {
+    gridValue.textContent = gridSize.value + " " + "x " + gridSize.value;
 });
 
-const gridSize = document.getElementById("gridSize");
-const gridValue = document.getElementById("gridSize").value;
-
-// gridSize.addEventListener("input", function(){
-//     document.getElementById("sizeLabel").textContent = `${gridValue}` + " " "x" + " " + `${gridValue}`;
-// });
