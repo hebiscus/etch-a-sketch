@@ -27,9 +27,13 @@ gridSize.addEventListener("input", function () {
     while (gridContainer.firstChild) {
         gridContainer.firstChild.remove()
     }
-    for (let i = 0; i < gridSize.value; i++) {
+    for (let i = 0; i < (gridSize.value * gridSize.value); i++) {
         const gridElement = document.createElement("div");
         gridElement.classList.add('gridElement');
         document.getElementById("gridContainer").appendChild(gridElement);
+        
     }
+    document.getElementById("gridContainer").style.gridTemplateColumns = repeat(gridSize.value, auto);
+    document.getElementById("gridContainer").style.gridTemplateRows = repeat(gridSize.value, auto);
 });
+
