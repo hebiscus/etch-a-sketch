@@ -33,7 +33,13 @@ gridSize.addEventListener("input", function () {
         document.getElementById("gridContainer").appendChild(gridElement);
         
     }
-    document.getElementById("gridContainer").style.gridTemplateColumns = repeat(gridSize.value, auto);
-    document.getElementById("gridContainer").style.gridTemplateRows = repeat(gridSize.value, auto);
+    document.getElementById("gridContainer").style.gridTemplateColumns = "repeat" + "(" + `${gridSize.value}` + "," + "auto)";
+    document.getElementById("gridContainer").style.gridTemplateRows = "repeat" + "(" + `${gridSize.value}` + "," + "auto)";
+
+    document.querySelectorAll('.gridElement').forEach(item => {
+        item.addEventListener('mouseover', event => {
+            event.target.style.backgroundColor = 'salmon';
+        });
+      });
 });
 
